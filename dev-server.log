@@ -1,0 +1,30 @@
+Starting Health App server in development mode...
+Raw SQL database connection initialized
+Encryption service initialized
+[INFO] Event: encryption_service_initialized 
+Server starting on port 5001 (binding for deployment on port 5001)
+[INFO] Monitoring system initialized 
+Setting up auth with session store: true
+Session settings: {
+  secret: '***',
+  resave: true,
+  saveUninitialized: true,
+  store: PGStore {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    ttl: undefined,
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false
+  },
+  name: 'decent4.sid',
+  cookie: {
+    path: '/',
+    maxAge: 2592000000,
+    secure: false,
+    httpOnly: false,
+    sameSite: 'lax'
+  }
+}
+Port 5001 is already in use. Please restart the workflow manually.
+Default promo code DECENT4FREE already exists

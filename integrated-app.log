@@ -1,0 +1,48 @@
+Initializing database connection...
+Database connection verified, skipping full initialization
+Error initializing prepared statements, continuing anyway: TypeError: initializePreparedStatements is not a function
+    at Module.initializeDatabase (/home/runner/workspace/server/db.ts:118:15)
+    at async <anonymous> (/home/runner/workspace/run-both.js:31:3)
+Database connection successful
+Configuring Smart Recommendations...
+Configuring integrated Smart Recommendations routes
+Smart Recommendations routes configured successfully
+Smart Recommendations configured successfully
+Smart Recommendations proxy configured for server at http://localhost:3007
+Configuring main API routes...
+Main API routes configured successfully
+▲ [WARNING] Duplicate key "skipLibCheck" in object literal [duplicate-object-key]
+
+    tsconfig.json:13:4:
+      13 │     "skipLibCheck": true,
+         ╵     ~~~~~~~~~~~~~~
+
+  The original key "skipLibCheck" is here:
+
+    tsconfig.json:7:4:
+      7 │     "skipLibCheck": true,
+        ╵     ~~~~~~~~~~~~~~
+
+Vite middleware configured
+Integrated health app running at http://0.0.0.0:5100
+Features enabled:
+- Main health application
+- Smart Recommendations
+- Health context-aware insights
+
+
+2025-04-16T19:43:35.552Z - Starting integrated health app
+Failed to start server: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/runner/workspace/server/db.js' imported from /home/runner/workspace/run-both.js
+    at finalizeResolution (node:internal/modules/esm/resolve:265:11)
+    at moduleResolve (node:internal/modules/esm/resolve:933:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1169:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:542:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:510:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:239:38)
+    at ModuleLoader.import (node:internal/modules/esm/loader:472:34)
+    at defaultImportModuleDynamicallyForModule (node:internal/modules/esm/utils:214:31)
+    at importModuleDynamicallyCallback (node:internal/modules/esm/utils:253:12)
+    at file:///home/runner/workspace/run-both.js:28:1 {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///home/runner/workspace/server/db.js'
+}

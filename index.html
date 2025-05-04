@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decent4 Supplements</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- Open Graph Meta Tags for Link Previews -->
+  <meta property="og:title" content="Decent4 Supplements" />
+  <meta property="og:description" content="Your personalized health journey - Track, Optimize, Thrive with data-driven insights." />
+  <meta property="og:image" content="/public/d4-gradient-outline.png" />
+  <meta property="og:url" content="https://decent4.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Decent4 Supplements" />
+  <meta name="twitter:description" content="Your personalized health journey - Track, Optimize, Thrive with data-driven insights." />
+  <meta name="twitter:image" content="/public/d4-gradient-outline.png" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green-primary: hsl(142, 75%, 35%);
+      --purple-primary: hsl(270, 75%, 40%);
+      --gradient-primary: linear-gradient(135deg, var(--green-primary), var(--purple-primary));
+      --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gradient-primary);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
+      width: 90%;
+      margin: 2rem auto;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding-bottom: 1rem;
+    }
+    
+    .title-section {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    
+    .status-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .status-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    
+    .status-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--card-shadow);
+    }
+    
+    .status-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .status-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+    
+    .status-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+    
+    .status-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    
+    .status-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: var(--purple-primary);
+    }
+    
+    .status-label {
+      font-size: 0.875rem;
+      color: #666;
+    }
+    
+    .main-content {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    
+    .message {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(0,0,0,0.02);
+      border-radius: 8px;
+    }
+    
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    }
+    
+    .button-icon {
+      margin-right: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 1.75rem;
+      }
+      
+      .status-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title-section">
+        <h1>Decent4 Supplements</h1>
+        <p class="subtitle">Your personalized health journey</p>
+      </div>
+    </div>
+    
+    <div class="status-section">
+      <div class="status-card">
+        <div class="status-header">
+          <div class="status-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,21L15.6,16.2C14.6,15.45 13.35,15 12,15C10.65,15 9.4,15.45 8.4,16.2L12,21M12,3C7.95,3 4.21,4.34 1.2,6.6L3,9C5.5,7.12 8.62,6 12,6C15.38,6 18.5,7.12 21,9L22.8,6.6C19.79,4.34 16.05,3 12,3M12,9C9.3,9 6.81,9.89 4.8,11.4L6.6,13.8C8.1,12.67 9.97,12 12,12C14.03,12 15.9,12.67 17.4,13.8L19.2,11.4C17.19,9.89 14.7,9 12,9Z" />
+            </svg>
+          </div>
+          <span class="status-title">Server Status</span>
+        </div>
+        <div class="status-value">Active</div>
+        <div class="status-label">All systems operational</div>
+      </div>
+      
+      <div class="status-card">
+        <div class="status-header">
+          <div class="status-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" />
+            </svg>
+          </div>
+          <span class="status-title">Database</span>
+        </div>
+        <div class="status-value">Connected</div>
+        <div class="status-label">Data syncing normally</div>
+      </div>
+      
+      <div class="status-card">
+        <div class="status-header">
+          <div class="status-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+            </svg>
+          </div>
+          <span class="status-title">Last Update</span>
+        </div>
+        <div class="status-value">28 Mar 2025</div>
+        <div class="status-label">10:44:29 AM UTC</div>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <p class="message">The application is currently in maintenance mode. The full version with all health tracking features will be available soon. We're working hard to add more functionality and improve your experience.</p>
+      
+      <button class="button" onclick="location.reload()">
+        <span class="button-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
+            <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" />
+          </svg>
+        </span>
+        Refresh Status
+      </button>
+    </div>
+    
+    <div class="main-content">
+      <h2 style="margin-bottom: 1rem; font-family: 'Poppins', sans-serif; font-size: 1.5rem;">Developer Resources</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <a href="/logo-preview" class="button" style="background: var(--purple-primary);">
+          <span class="button-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+            </svg>
+          </span>
+          Logo Preview
+        </a>
+        <a href="/asset-viewer" class="button" style="background: var(--green-primary);">
+          <span class="button-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M22,16V4A2,2 0 0,0 20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16M11,15L9.5,13.5L11,12L9.5,10.5L11,9L12.5,10.5L14,9L15.5,10.5L14,12L15.5,13.5L14,15L12.5,13.5L11,15M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6Z" />
+            </svg>
+          </span>
+          Asset Viewer
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

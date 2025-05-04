@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Kill any existing node processes running on port 5001
+echo "Checking for processes on port 5001..."
+lsof -i:5001 | grep LISTEN | awk '{print $2}' | xargs -r kill -9
+
+# Small delay to ensure port is freed
+sleep 1
+
+# Start the development server with debugging enabled
+echo "Starting server on port 5001..."
+NODE_ENV=development PORT=5001 node run-dev.js

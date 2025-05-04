@@ -1,0 +1,269 @@
+[2025-04-07T17:42:26.351Z] Removed .replit.port file
+[2025-04-07T17:42:26.356Z] Removed .ready file
+[2025-04-07T17:42:26.356Z] Removed .starting file
+[2025-04-07T17:42:26.356Z] Starting health app server workflow...
+[2025-04-07T17:42:26.361Z] Health app server started on port 5500
+[2025-04-07T17:42:29.366Z] Health app server is ready
+[2025-04-07T17:42:29.366Z] Health app available at: http://0.0.0.0:5500/
+[2025-04-07T17:42:29.366Z] Health API endpoint: http://0.0.0.0:5500/api/health
+Starting Health App server in development mode...
+Starting client development server...
+Port 3000 is in use, trying another one...
+
+  VITE v5.4.14  ready in 220 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: use --host to expose
+ERROR: Error fetching user by username: ReferenceError: Cannot access 'db' before initialization
+    at DatabaseStorage.getUserByUsername (/home/runner/workspace/server/storage.ts:176:22)
+    at createAdminUser (/home/runner/workspace/server/storage.ts:1972:41)
+    at <anonymous> (/home/runner/workspace/server/storage.ts:2003:1)
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+ERROR: Error initializing promo code: ReferenceError: Cannot access 'db' before initialization
+    at initializePromoCode (/home/runner/workspace/server/storage.ts:2015:33)
+    at <anonymous> (/home/runner/workspace/server/storage.ts:2039:1)
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+ERROR: Error: The following dependencies are imported but could not be resolved:
+
+  @/hooks/use-auth (imported by /home/runner/workspace/client/src/components/layout/header.tsx)
+  @/components/ui/simple-avatar (imported by /home/runner/workspace/client/src/components/layout/header.tsx)
+  @/components/layout/header (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/layout/bottom-navigation (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/hooks/use-offline-status (imported by /home/runner/workspace/client/src/components/OfflineNotification.tsx)
+  @/components/smart-recommendations/SmartRecommendationsTab (imported by /home/runner/workspace/client/src/pages/SmartRecommendationsPage.tsx)
+  @/components/ui/card (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/hooks/use-help-guides (imported by /home/runner/workspace/client/src/pages/help-guides-page.tsx)
+  @/lib/queryClient (imported by /home/runner/workspace/client/src/pages/subscribe-page.tsx)
+  @/components/SimplifiedLoginForm (imported by /home/runner/workspace/client/src/pages/simplified-auth-page.tsx)
+  @/hooks/use-medications (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/dashboard/health-metrics-summary (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/hooks/use-toast (imported by /home/runner/workspace/client/src/pages/supplements-page.tsx)
+  @/components/smart-recommendations/BottomNavigationWithSmart (imported by /home/runner/workspace/client/src/pages/SmartRecommendationsPage.tsx)
+  @/components/ui/button (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/components/page-layout (imported by /home/runner/workspace/client/src/pages/ContextAwareRecommendations.tsx)
+  @/lib/navigation (imported by /home/runner/workspace/client/src/components/layout/header.tsx)
+  @/components/dashboard/bloodwork-visualization (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/components/ui/badge (imported by /home/runner/workspace/client/src/pages/medications-page.tsx)
+  @/components/ui/separator (imported by /home/runner/workspace/client/src/pages/help-page.tsx)
+  @/components/ui/tabs (imported by /home/runner/workspace/client/src/pages/settings-page.tsx)
+  @/components/ui/simple-tabs (imported by /home/runner/workspace/client/src/pages/journal-page.tsx)
+  @/components/help/help-guides-list (imported by /home/runner/workspace/client/src/pages/help-guides-page.tsx)
+  @/hooks/use-mobile (imported by /home/runner/workspace/client/src/components/AccessibilityOptimizations.tsx)
+  @/lib/component-compatibility-layer (imported by /home/runner/workspace/client/src/pages/medications-page.tsx)
+  @/components/ui/simple-dialog (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/ui/textarea (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/journal/journal-feature (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/components/help/SignupGuide (imported by /home/runner/workspace/client/src/pages/help-guides-page.tsx)
+  @/hooks/use-health-data (imported by /home/runner/workspace/client/src/pages/health-page.tsx)
+  @/components/admin/AdminDashboard (imported by /home/runner/workspace/client/src/pages/admin-page.tsx)
+  @/config/mobile-config (imported by /home/runner/workspace/client/src/components/AccessibilityOptimizations.tsx)
+  @/components/ui/label (imported by /home/runner/workspace/client/src/pages/medications-page.tsx)
+  @/components/ui/input (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/ui/form (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/ui/icons (imported by /home/runner/workspace/client/src/pages/ContextAwareRecommendations.tsx)
+  @/components/challenges/challenges-panel (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/components/AvatarUploader (imported by /home/runner/workspace/client/src/pages/AvatarTest.tsx)
+  @/components/ui/select (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/dashboard/supplement-manager (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/components/ui/skeleton (imported by /home/runner/workspace/client/src/pages/ContextAwareRecommendations.tsx)
+  @/lib/performance-optimizer (imported by /home/runner/workspace/client/src/components/OptimizedLoadingSpinner.tsx)
+  @/components/dashboard/community-highlights (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/components/onboarding/OnboardingWalkthrough (imported by /home/runner/workspace/client/src/pages/OnboardingPage.tsx)
+  @/components/ui/switch (imported by /home/runner/workspace/client/src/pages/profile-page.tsx)
+  @/hooks/use-community (imported by /home/runner/workspace/client/src/pages/combined-journal-page.tsx)
+  @/hooks/use-theme (imported by /home/runner/workspace/client/src/components/layout/header.tsx)
+  @/hooks/use-supplements (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/lib/utils (imported by /home/runner/workspace/client/src/components/ui/button.tsx)
+  @/hooks/use-journal (imported by /home/runner/workspace/client/src/pages/combined-journal-page.tsx)
+  @shared/schema (imported by /home/runner/workspace/client/src/pages/medications-page.tsx)
+  @/components/supplements/supplement-recommendations (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/ui/alert-dialog (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/health/health-metric-selector (imported by /home/runner/workspace/client/src/pages/health-page.tsx)
+  @/hooks/use-context-aware (imported by /home/runner/workspace/client/src/pages/dashboard-page.tsx)
+  @/lib/performance-monitor (imported by /home/runner/workspace/client/src/components/ResponsiveOptimizations.tsx)
+  @/components/subscription/PromoCodeForm (imported by /home/runner/workspace/client/src/pages/subscribe-page.tsx)
+  @/components/supplements/bulk-delete-supplements (imported by /home/runner/workspace/client/src/pages/supplements-page.tsx)
+  @/components/health/bloodwork-visualization (imported by /home/runner/workspace/client/src/pages/health-page.tsx)
+  @/hooks/use-questionnaire (imported by /home/runner/workspace/client/src/pages/profile-page.tsx)
+  @/components/health/analyzer (imported by /home/runner/workspace/client/src/pages/health-page.tsx)
+  @/components/health/wearable-devices (imported by /home/runner/workspace/client/src/pages/health-page.tsx)
+  @/components/profile/ProfileCompletionCalculator (imported by /home/runner/workspace/client/src/pages/profile-page.tsx)
+  @/components/ui/calendar (imported by /home/runner/workspace/client/src/pages/medications-page.tsx)
+  @/hooks/use-navigate (imported by /home/runner/workspace/client/src/pages/settings-page.tsx)
+  @/components/ui/dropdown-menu (imported by /home/runner/workspace/client/src/pages/supplements-page.tsx)
+  @/components/ui/simple-alert-dialog (imported by /home/runner/workspace/client/src/pages/supplements-page.tsx)
+  @/components/supplements/supplement-interactions-fixed (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+  @/components/medications/medication-card (imported by /home/runner/workspace/client/src/pages/combined-medications-page.tsx)
+
+Are they installed?
+    at file:///home/runner/workspace/node_modules/vite/dist/node/chunks/dep-CHZK6zbr.js:50668:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///home/runner/workspace/node_modules/vite/dist/node/chunks/dep-CHZK6zbr.js:50173:26
+Raw SQL database connection initialized
+Encryption service initialized
+[INFO] Event: encryption_service_initialized 
+Server starting on port 5100 (binding for deployment on port 5001)
+[INFO] Monitoring system initialized 
+Setting up auth with session store: true
+Session settings: {
+  secret: '***',
+  resave: true,
+  saveUninitialized: true,
+  store: PGStore {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    ttl: undefined,
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false
+  },
+  name: 'decent4.sid',
+  cookie: {
+    path: '/',
+    maxAge: 2592000000,
+    secure: false,
+    httpOnly: false,
+    sameSite: 'lax'
+  }
+}
+Server started on port 5100
+Ready signals created
+Server successfully listening on port 5100
+Server is running at http://localhost:5100
+PORT=5100
+Starting database initialization in background...
+ERROR: Error creating user: PostgresError: duplicate key value violates unique constraint "users_username_key"
+    at ErrorResponse (file:///home/runner/workspace/node_modules/postgres/src/connection.js:788:26)
+    at handle (file:///home/runner/workspace/node_modules/postgres/src/connection.js:474:6)
+    at TLSSocket.data (file:///home/runner/workspace/node_modules/postgres/src/connection.js:315:9)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+  severity_local: 'ERROR',
+  severity: 'ERROR',
+  code: '23505',
+  detail: 'Key (username)=(admin) already exists.',
+  schema_name: 'public',
+  table_name: 'users',
+  constraint_name: 'users_username_key',
+  file: 'nbtinsert.c',
+  line: '666',
+  routine: '_bt_check_unique'
+}
+ERROR: Error creating admin user: PostgresError: duplicate key value violates unique constraint "users_username_key"
+    at ErrorResponse (file:///home/runner/workspace/node_modules/postgres/src/connection.js:788:26)
+    at handle (file:///home/runner/workspace/node_modules/postgres/src/connection.js:474:6)
+    at TLSSocket.data (file:///home/runner/workspace/node_modules/postgres/src/connection.js:315:9)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+  severity_local: 'ERROR',
+  severity: 'ERROR',
+  code: '23505',
+  detail: 'Key (username)=(admin) already exists.',
+  schema_name: 'public',
+  table_name: 'users',
+  constraint_name: 'users_username_key',
+  file: 'nbtinsert.c',
+  line: '666',
+  routine: '_bt_check_unique'
+}
+Database connection verified, skipping full initialization
+Database initialized successfully
+Scheduled regular backups to start in 5 minutes
+Backup system initialized
+[INFO] Event: backup_system_initialized 
+[INFO] Monitoring system initialized 
+Database connection verified, skipping full initialization
+Database initialized successfully
+Backup system initialized
+[INFO] Monitoring system initialized 
+Performance optimizations registered
+API documentation generated successfully
+[INFO] Event: server_started { port: 5100 }
+Loading performance optimizations registered successfully
+Loading performance optimizations registered successfully
+Backup directory created at /home/runner/workspace/backups
+Server should be ready now
+Loaded 2FA data for 0 users
+[2025-04-11T14:19:04.338Z] Starting Health App server...
+[2025-04-11T14:19:04.342Z] Executing command: npm run dev
+[2025-04-11T14:19:04.347Z] Health App server startup initiated.
+[2025-04-11T14:19:05.154Z] [stdout] > rest-express@1.0.0 dev
+> tsx server/index.ts
+[2025-04-11T14:19:09.351Z] Health App server is ready.
+[2025-04-11T14:19:12.310Z] [stderr] Error fetching user by username: ReferenceError: Cannot access 'importedDbInitialized' before initialization
+    at DatabaseStorage.getUserByUsername (/home/runner/workspace/server/storage.ts:199:7)
+    at createAdminUser (/home/runner/workspace/server/storage.ts:2042:41)
+    at <anonymous> (/home/runner/workspace/server/storage.ts:2073:1)
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+[2025-04-11T14:19:12.310Z] [stderr] Error initializing promo code: ReferenceError: Cannot access 'importedDb' before initialization
+    at initializePromoCode (/home/runner/workspace/server/storage.ts:2085:33)
+    at <anonymous> (/home/runner/workspace/server/storage.ts:2109:1)
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+[2025-04-11T14:19:12.694Z] [stdout] Connecting to Redis with normalized URL
+[2025-04-11T14:19:12.697Z] [stdout] Batched AI processor initialized with config: {
+  batchSize: 5,
+  batchIntervalMs: 5000,
+  maxQueueSize: 1000,
+  maxRetries: 3,
+  retryDelayMs: 1000,
+  logLevel: 'info',
+  cacheResults: true,
+  priorityBoost: true,
+  healthMetricsInterval: 30000
+}
+[2025-04-11T14:19:12.699Z] [stdout] Streaming demo written to /home/runner/workspace/public/streaming-demo.html
+[2025-04-11T14:19:12.987Z] [stderr] Background database initialization failed: ReferenceError: Cannot access 'importedDbInitialized' before initialization
+    at DatabaseStorage.ensureDatabaseInitialized (/home/runner/workspace/server/storage.ts:160:5)
+    at new DatabaseStorage (/home/runner/workspace/server/storage.ts:151:10)
+    at <anonymous> (/home/runner/workspace/server/storage.ts:2036:17)
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+[2025-04-11T14:19:14.100Z] [stdout] Raw SQL database connection initialized
+[2025-04-11T14:19:14.103Z] [stdout] Encryption service initialized
+[2025-04-11T14:19:14.105Z] [stdout] [INFO] Event: encryption_service_initialized
+[2025-04-11T14:19:14.173Z] [stdout] Server starting on port 3000 (binding for deployment on port 5001)
+[2025-04-11T14:19:14.183Z] [stdout] [INFO] Monitoring system initialized
+[2025-04-11T14:19:14.184Z] [stdout] Setting up auth with session store: true
+[2025-04-11T14:19:14.186Z] [stdout] Session settings: {
+  secret: '***',
+  resave: true,
+  saveUninitialized: true,
+  store: PGStore {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    ttl: undefined,
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false
+  },
+  name: 'decent4.sid',
+  cookie: {
+    path: '/',
+    maxAge: 2592000000,
+    secure: false,
+    httpOnly: false,
+    sameSite: 'lax'
+  }
+}
+[2025-04-11T14:19:14.212Z] [stdout] Successfully connected to Redis
+[2025-04-11T14:19:14.320Z] [stdout] Server started on port 3000
+[2025-04-11T14:19:14.321Z] [stdout] Ready signals created
+[2025-04-11T14:19:14.321Z] [stdout] Server successfully listening on port 3000
+Server is running at http://localhost:3000
+PORT=3000
+[2025-04-11T14:19:14.429Z] [stdout] Starting database initialization in background...
