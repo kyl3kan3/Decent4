@@ -7,6 +7,9 @@
 import express from 'express';
 import { generateSupplementRecommendations, getUserHealthData } from './server/openai-supplements.js';
 import dotenv from 'dotenv';
+import { pathToFileURL } from 'node:url';
+import { isAbsolute } from 'node:path';
+import { createHealthAuth } from './health-auth.mjs';
 
 // Load environment variables
 dotenv.config();
@@ -33,35 +36,22 @@ app.use((req, res, next) => {
   next();
 });
 
-// Add authentication middleware
-app.use((req, res, next) => {
-  // Check for user ID in header
-  const userId = req.headers['x-user-id'];
-  
-  if (!userId) {
-    console.log('No user ID provided in request headers');
-    // Allow health endpoint without authentication
-    if (req.path === '/health') {
-      return next();
-    }
-    return res.status(401).json({ 
-      message: "Authentication required", 
-      success: false 
-    });
-  }
-  
-  // Set the user ID on the request object
-  req.userId = userId;
-  console.log(`Request authenticated with user ID: ${userId}`);
-  next();
-});
+// Integrate the host application's verified session model; fail closed until supplied.
+let authenticateSession;
+const authModule = process.env.HEALTH_AUTH_MODULE;
+if (authModule) {
+  if (!isAbsolute(authModule)) throw new Error('HEALTH_AUTH_MODULE must be an absolute path');
+  ({ authenticateSession } = await import(pathToFileURL(authModule).href));
+  if (typeof authenticateSession !== 'function') throw new Error('Session module must export authenticateSession');
+}
+app.use(createHealthAuth(authenticateSession));
 
 // Smart recommendations endpoints
 app.get('/api/context-aware/health-recommendations', async (req, res) => {
   console.log('Received request for health recommendations');
   
   // Get user ID from request headers
-  const userId = req.headers['x-user-id'] ? parseInt(req.headers['x-user-id'].toString()) : 370; // Default to admin user ID if not provided
+  const userId = req.userId; // Verified by the session middleware
   console.log(`Processing health recommendations for user ID: ${userId}`);
   
   try {
@@ -413,7 +403,7 @@ app.get('/api/context-aware/supplement-recommendations', async (req, res) => {
   console.log('Received request for supplement recommendations');
   
   // Get user ID from request headers
-  const userId = req.headers['x-user-id'] ? parseInt(req.headers['x-user-id'].toString()) : 370; // Default to admin user ID if not provided
+  const userId = req.userId; // Verified by the session middleware
   console.log(`Processing supplement recommendations for user ID: ${userId}`);
   
   try {
@@ -807,7 +797,7 @@ app.get('/api/context-aware/supplements', async (req, res) => {
   console.log('Received request for supplements at /api/context-aware/supplements');
   
   // Get the userId for personalization
-  const userId = req.userId || '1';
+  const userId = req.userId;
   console.log(`Generating personalized supplement recommendations for user ${userId}`);
   
   try {
@@ -896,7 +886,7 @@ app.get('/api/context-aware/supplements/regenerate', async (req, res) => {
   
   try {
     // Get the userId for personalization
-    const userId = req.userId || '1';
+    const userId = req.userId;
     
     // Fetch real user data from the database
     console.log(`Fetching fresh health data for user ID: ${userId}`);
@@ -945,7 +935,7 @@ app.get('/api/context-aware/health-context', async (req, res) => {
   console.log('Received request for health context');
   
   // Get user ID from request headers
-  const userId = req.headers['x-user-id'] ? parseInt(req.headers['x-user-id'].toString()) : 370; // Default to admin user ID if not provided
+  const userId = req.userId; // Verified by the session middleware
   console.log(`Processing health context for user ID: ${userId}`);
   
   try {
@@ -1233,7 +1223,7 @@ app.get('/api/context-aware/health', async (req, res) => {
   console.log('Received request for health context and recommendations');
   
   // Get user ID from request headers
-  const userId = req.headers['x-user-id'] ? parseInt(req.headers['x-user-id'].toString()) : 370; // Default to admin user ID if not provided
+  const userId = req.userId; // Verified by the session middleware
   console.log(`Processing health recommendations for user ID: ${userId}`);
   
   try {
